@@ -188,6 +188,37 @@
 
 	</head>
 	<body>
+		
+	   <script>
+		// Set the date we're counting down to
+		var countDownDate = new Date("Oct 3, 2017 10:00:00").getTime();
+
+		// Update the count down every 1 second
+		var x = setInterval(function() {
+
+	        // Get todays date and time
+    		var now = new Date().getTime();
+    
+    		// Find the distance between now an the count down date
+    		var distance = countDownDate - now;
+    
+    		// Time calculations for days, hours, minutes and seconds
+    		var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    		var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    		var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    		var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    		// Output the result in an element with id="demo"
+    		document.getElementById("clk").innerHTML =days + "d " + hours + "h "+ minutes + "m " + seconds + "s";
+    
+    		// If the count down is over, write some text 
+    		if (distance <= 0) {
+        		clearInterval(x);
+        		document.getElementById("clk").innerHTML = "REGISTRATION CLOSED";
+    			}
+		}, 1000);
+	</script>	
+		
 	<header role="banner" id="fh5co-header">
 			<div class="container">
 				<!-- <div class="row"> -->
@@ -251,22 +282,19 @@
 		    	</div>
 		    </div>
 			<!-- You may change the background color here.  -->
-		    <div class="item" style="background: #38569f;">
+	
+		     <div class="item" style="background-image: url(images/b.jpg)">
 		    	<div class="container" style="position: relative;">
 		    		<div class="row">
-		    			<div class="col-md-7 col-md-push-1 col-md-push-5 col-sm-7 col-sm-push-1 col-sm-push-5">
+					    <div class="col-md-7 col-sm-7">
 			    			<div class="fh5co-owl-text-wrap">
-						    	<div class="fh5co-owl-text">
-						    		<h1 class="fh5co-lead to-animate">TOGGLE</h1>
-									<h2 class="fh5co-sub-lead to-animate">The Oxford Group of GNU/Linux Enthusiasts</h2>
+						      <div class="fh5co-owl-text">
+						    		<h1 class="fh5co-lead to-animate">Firefox Quantum Sprint</h1>
+                                  <div><p id="clk" style="color: black"></p></div>
 									<!--<p class="to-animate-2"><a href="#" class="btn btn-primary btn-lg">View Case Study</a></p>-->
-						    	</div>
+						    	</div>	
 						    </div>
-					    </div>
-					    <div class="col-md-4 col-md-pull-7 col-sm-4 col-sm-pull-7 iphone-image">
-					    	<div class="iphone to-animate-2"><img src="images/retc.png"> </div>
-					    </div>
-
+					</div>
 		    		</div>
 		    	</div>
 		    </div>
@@ -274,13 +302,13 @@
 	</div>
 	
 	<div id="fh5co-about-us" data-section="about">
-<div class="container" style="position: relative;">
+		<div class="container" style="position: relative;">
 			<div class="row row-bottom-padded-lg" id="about-us">
 				<div class="col-md-12 section-heading text-center">
 					<h2 class="to-animate">About Us</h2>
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2 to-animate">
-                            <h3>We are a GLUG composed of students from the department Computer Science and Engineering, who share a common vision and philosophy of the <b>Free Software Foundation</b>.</h3>
+                            				<h3>We are a GLUG composed of students from the department Computer Science and Engineering, who share a common vision and philosophy of the <b>Free Software Foundation</b>.</h3>
 						</div>
 					</div>
 				</div>
@@ -391,7 +419,7 @@
 					<div class="box to-animate">
 						<div class="icon colored-3"><span><i class="icon-code"></i></span></div>
                         <h3><b>First time programmers</b></h3>
-						<p>We are always there to teach and help people to grow their potential and become upstream contributors.</p>
+						<p>We are always there to spread the idea of Open Source and help people to grow their potential and become upstream contributors on revolutionary Open Technologies.</p>
 					</div>
 					<div class="box to-animate">
 						<div class="icon colored-6"><span><i class="icon-user"></i></span></div>
@@ -420,41 +448,12 @@
 				<div class="col-md-6">
 					<!-- Press Item -->
 					<div class="fh5co-press-item to-animate">
-						<div class="fh5co-press-img" style="background-image: url(images/impulse.jpg); background-size:cover;">
+						<div class="fh5co-press-img" style="background-image: url(images/Firefox.jpg)">
 						</div>
 						<div class="fh5co-press-text">
-							<h3 class="h2 fh5co-press-title">IMPULSE 2k17<span class="fh5co-border"></span></h3>
-							<p>After 3 successful iterations, impulse 2k17 is back!</p>
-                            <p>We are glad to inform you that our glug organized two days State level technical fest on April 4th & 5th...</p>
-							<p><a href="#" class="btn btn-primary btn-sm">Learn more</a></p>
-						</div>
-					</div>
-					<!-- Press Item -->
-				</div>
-
-				<div class="col-md-6">
-					<!-- Press Item -->
-					<div class="fh5co-press-item to-animate">
-						<div class="fh5co-press-img" style="background-image: url(images/logoj.png)">
-						</div>
-						<div class="fh5co-press-text">
-							<h3 class="h2 fh5co-press-title">NCSEM-17<span class="fh5co-border"></span></h3>
-							<p>We are glad to inform you that THE OXFORD COLLEGE OF ENGINEERING organized two days NATIONAL CONFERENCE ON SUSTAINABLE ENGINEERING & MANAGEMENT on May 26th & 27th</p>
-							<p><a href="#" class="btn btn-primary btn-sm">Learn more</a></p>
-						</div>
-					</div>
-					<!-- Press Item -->
-				</div>
-				
-				<div class="col-md-6">
-					<!-- Press Item -->
-					<div class="fh5co-press-item to-animate">
-						<div class="fh5co-press-img" style="background-image: url(images/freedom.jpg);">
-						</div>
-						<div class="fh5co-press-text">
-							<h3 class="h2 fh5co-press-title">Software Freedom Day<span class="fh5co-border"></span></h3>
-							<p><b>Free as Freedom!</b><br/></p><p>SFD is a public education effort to increase awareness of FOSS and its virtues, and encouraging its use. As a continuum, we are also celebrate SFD </p>
-							<p><a href="#" class="btn btn-primary btn-sm">Learn more</a></p>
+							<h3 class="h2 fh5co-press-title">FireFox Quantam Sprint<span class="fh5co-border"></span></h3>
+                            <p><b>Come help Firefox have a successful launch in the region!</b></p><p>TOGGLE in association with FSMK and <mark style="background-color: black;color: white">moz://a</mark> giving you the opportunity to be the part of it.<br/>Registration Open..</p>
+							<p><a href="images/FirefoxSprint.png" class="btn btn-primary btn-sm">Learn more</a></p>
 						</div>
 					</div>
 					<!-- Press Item -->
@@ -473,11 +472,38 @@
 					</div>
 					<!-- Press Item -->
 				</div>
+                <div class="col-md-6">
+					<!-- Press Item -->
+					<div class="fh5co-press-item to-animate">
+						<div class="fh5co-press-img" style="background-image: url(images/freedom.jpg);">
+						</div>
+						<div class="fh5co-press-text">
+							<h3 class="h2 fh5co-press-title">Software Freedom Day<span class="fh5co-border"></span></h3>
+							<p><b>Free as Freedom!</b><br/></p><p>SFD is a public education effort to increase awareness of FOSS and its virtues, and encouraging its use. As a continuum, we are also celebrate SFD </p>
+							<p><a href="#" class="btn btn-primary btn-sm">Learn more</a></p>
+						</div>
+					</div>
+					<!-- Press Item -->
+				</div>
+                     <div class="col-md-6">
+					<!-- Press Item -->
+					<div class="fh5co-press-item to-animate">
+						<div class="fh5co-press-img" style="background-image: url(images/impulse.jpg); background-size:cover;">
+						</div>
+						<div class="fh5co-press-text">
+							<h3 class="h2 fh5co-press-title">IMPULSE 2k17<span class="fh5co-border"></span></h3>
+							<p>After 3 successful iterations, impulse 2k17 is back!</p>
+                            <p>We are glad to inform you that our glug organized two days State level technical fest on April 4th & 5th...</p>
+							<p><a href="#" class="btn btn-primary btn-sm">Learn more</a></p>
+						</div>
+					</div>
+					<!-- Press Item -->
+				</div>
                     		<div class="col-md-4 col-md-offset-4">
 					<a href="event/event.html" class="btn btn-primary btn-block">See More</a>
 				</div>
-			</div>
-		</div>
+			</div>	
+	    </div>
 	</div>
 
 	<div id="fh5co-testimonials" data-section="testimonials">		
@@ -494,7 +520,7 @@
 							<span class="quote"><span><i class="icon-quote-left"></i></span></span>
 							<p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
 						</blockquote>
-						<p class="author">Dr. Anandhi.R.J, HOD <a href="" target="_blank">Dept. of CSE</a></p>
+						<p class="author">Dr. R.J. Anandhi, HOD <a href="" target="_blank">Dept. of CSE</a></p>
 					</div>
 					
 				</div>
